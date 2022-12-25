@@ -1,4 +1,5 @@
 import Logo from "../assets/polymer-logo-with-icon.png.png";
+import TickMark from "../assets/icons8-check-mark-button-36.png";
 
 export default function PolymerForm() {
   const form = {
@@ -8,7 +9,7 @@ export default function PolymerForm() {
   };
 
   return (
-    <div className="w-2/6 ml-20">
+    <div className="w-1/2 ml-20 px-4">
       <div className="w-56">
         <img className="w-full" src={Logo}></img>
       </div>
@@ -17,15 +18,12 @@ export default function PolymerForm() {
         <p className="text-blue-500 font-semibold">FREE DOWNLOAD</p>
       </div>
 
-      <div className="reletive mt-4">
-        <img
-          className="absolute w-9"
-          src="https://img.icons8.com/emoji/48/null/check-mark-button-emoji.png"
-        />
-        <h1 className="text-3xl font-bold mb-4 ml-10">{form.title}</h1>
-      </div>
+      <p className="mt-4">
+        <img className="inline-block align-top m-0" src={TickMark} />
+        <span className="text-2xl font-bold mb-4 ml-1">{form.title}</span>
+      </p>
 
-      <p className="text-lg text-gray-400">{form.description}</p>
+      <p className="text-lg text-gray-400 mt-4">{form.description}</p>
 
       <div className="grid colms-1 gap-2 mt-6">
         <div className="relative">
@@ -79,7 +77,7 @@ export default function PolymerForm() {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="white"
-            class="w-6 h-6 absolute left-32 top-2"
+            class="w-6 h-6 absolute left-4 top-2"
           >
             <path
               stroke-linecap="round"
@@ -89,7 +87,7 @@ export default function PolymerForm() {
           </svg>
 
           <input
-            className="w-full pl-11 rounded pr-4 cursor-pointer bg-blue-500 text-white border border-gray-300 rounded-sm py-2"
+            className="w-full pl-11 rounded pr-4 cursor-pointer bg-blue-500 text-white border border-gray-300 rounded-sm py-2 hover:bg-sky-400"
             type="submit"
             value="I WANT THE FREE TEMPLATES"
           />
