@@ -1,17 +1,17 @@
 import "./App.css";
-import PolymerForm from "./components/polymerForm";
-import BackGround from "./components/backGround";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+//import pages
+import HomePage from "./pages/HomePage";
+import VideoPage from "./pages/VideoPage";
 
 function App() {
   return (
-    <div className="reletive w-full">
-      <div className="absolute top-28 right-20">
-        <BackGround />
-      </div>
-      <div className="absolute top-24">
-        <PolymerForm />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/video" element={<VideoPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
