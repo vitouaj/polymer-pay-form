@@ -1,5 +1,6 @@
 import Logo from "../assets/polymer-logo-with-icon.png.png";
 import TickMark from "../assets/icons8-check-mark-button-36.png";
+import invoice from "../assets/invoice.jpg";
 
 export default function PolymerForm() {
   const form = {
@@ -9,19 +10,30 @@ export default function PolymerForm() {
   };
 
   return (
-    <div className="w-1/2 ml-20 px-4">
-      <div className="w-56">
+    <div className="sm:w-1/2 sm:ml-20 sm:px-4 mx-6 text-sm">
+      <div className="sm:w-56 w-32 mb-7">
         <img className="w-full" src={Logo}></img>
       </div>
 
-      <div className="bg-sky-200 w-fit px-6 rounded-2xl mt-14 mb-2">
-        <p className="text-blue-500 font-semibold">FREE DOWNLOAD</p>
+      <div className="sm:bg-sky-200 sm:w-fit sm:px-6 sm:rounded-2xl sm:mt-14 sm:mb-2 grid justify-items-center">
+        <p className="text-blue-500 bg-sky-200 px-4 rounded-2xl font-semibold">
+          FREE DOWNLOAD
+        </p>
       </div>
 
-      <p className="mt-4">
-        <img className="inline-block align-top m-0" src={TickMark} />
-        <span className="text-2xl font-bold mb-4 ml-1">{form.title}</span>
+      <p className="mt-4 reletive mb-6">
+        <img className="inline-block sm:align-top sm:m-0 w-6" src={TickMark} />
+        <span className="sm:text-2xl  font-bold sm:mb-4 sm:ml-1 text-lg">
+          {form.title}
+        </span>
       </p>
+
+      <div className="sm:hidden grid justify-items-center">
+        <img
+          className="max-w-[50%] drop-shadow-md drop-shadow-2xl"
+          src={invoice}
+        ></img>
+      </div>
 
       <p className="text-lg text-gray-400 mt-4">{form.description}</p>
 

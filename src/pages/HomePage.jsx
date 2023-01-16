@@ -7,7 +7,7 @@ export default function HomePage() {
       <div className="absolute top-28 right-20">
         <BackGround />
       </div>
-      <div className="absolute top-24">
+      <div className="sm:absolute sm:top-24 mt-6">
         <PolymerForm />
       </div>
     </div>
